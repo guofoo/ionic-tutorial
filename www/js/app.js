@@ -26,7 +26,7 @@ angular.module('directory', ['ionic', 'directory.services'])
  EmployeeService.findAll()
  .then( function(employees) {
    $scope.employees = employees;
- });
+   });
 }])
 
 ;
