@@ -29,11 +29,11 @@
         <h1 class="title">Employee Directory</h1>
       </ion-header-bar>
       <ion-content>
-<ion-list>
-<ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar">
-
-</ion-item>
-</ion-list>
+        <ion-list> 
+          <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"> 
+           {{employee.firstName}} {{employee.lastName}}
+         </ion-item>
+        </ion-list> 
       </ion-content> 
     </ion-pane>
     
