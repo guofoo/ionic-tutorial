@@ -23,12 +23,10 @@ angular.module('directory', ['ionic', 'directory.services'])
 
   //use EmployeeService.findAll method to return employees
   //use .then(successCallback, errorCallback, notifyCallback) to get employees
-  $scope.employees = [
-    {"id": 1, "firstName": "James", "lastName": "King", "title": "President and CEO", "pic": "James_King.jpg"},
-    {"id": 2, "firstName": "Julie", "lastName": "Taylor", "title": "VP of Marketing", "pic": "Julie_Taylor.jpg"},
-    {"id": 3, "firstName": "Eugene", "lastName": "Lee", "title": "CFO", "pic": "Eugene_Lee.jpg"}
-  ];
-
+ EmployeeService.findAll()
+ .then( function(employees) {
+   $scope.employees = employees;
+ });
 }])
 
 ;
