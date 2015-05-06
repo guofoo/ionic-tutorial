@@ -23,8 +23,8 @@ angular.module('directory', ['ionic', 'directory.services'])
 
   //use EmployeeService.findAll method to return employees
   //use .then(successCallback, errorCallback, notifyCallback) to get employees
-  var result = EmployeeService.findAll();
-  result.resolve(value)
+  EmployeeService.findAll()
+  .resolve(value)
   .then(function(value) {
     $scope.employees = value;
   });
